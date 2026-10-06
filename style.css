@@ -9,6 +9,7 @@
   --color-border: #d8d3ca;
   --color-white: #ffffff;
   --color-muted: #77736d;
+  --color-surface: #e8e3da;
 }
 
 html {
@@ -244,7 +245,7 @@ a {
 
   padding: 7rem 5%;
 
-  background-color: #e8e3da;
+  background-color: var(--color-surface);
 }
 
 .contact-intro h2 {
@@ -309,4 +310,26 @@ a {
 .contact-button:hover {
   background-color: var(--color-text);
   color: var(--color-background);
+}
+
+
+/* Footer */
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem 5%;
+
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a:hover {
+  color: var(--color-accent);
 }
