@@ -8,6 +8,7 @@
   --color-accent: #a45c45;
   --color-border: #d8d3ca;
   --color-white: #ffffff;
+  --color-muted: #77736d;
 }
 
 html {
@@ -228,7 +229,84 @@ a {
 }
 
 .about-content p {
-  color: #77736d;
+  color: var(--color-muted);
   font-size: 1.05rem;
   line-height: 1.7;
+}
+
+
+/* Contact */
+
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+
+  padding: 7rem 5%;
+
+  background-color: #e8e3da;
+}
+
+.contact-intro h2 {
+  margin-top: 0;
+
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.contact-form {
+  max-width: 600px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  padding: 1rem;
+
+  border: 1px solid var(--color-muted);
+  border-radius: 0;
+
+  background-color: var(--color-background);
+  color: var(--color-text);
+
+  font: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.contact-button {
+  padding: 0.9rem 1.5rem;
+
+  border: 1px solid var(--color-text);
+
+  background-color: transparent;
+  color: var(--color-text);
+
+  font: inherit;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.contact-button:hover {
+  background-color: var(--color-text);
+  color: var(--color-background);
 }
