@@ -129,6 +129,31 @@ a {
 }
 
 /* ------------------------------
+   Buttons
+------------------------------ */
+
+.primary-button {
+  display: inline-block;
+
+  padding: 0.9rem 1.5rem;
+
+  border: 1px solid currentColor;
+
+  background: transparent;
+  color: inherit;
+
+  font: inherit;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.primary-button:hover {
+  background-color: var(--color-text);
+  color: var(--color-background);
+}
+
+/* ------------------------------
    Work / Gallery
 ------------------------------ */
 
