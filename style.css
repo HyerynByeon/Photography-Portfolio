@@ -226,3 +226,58 @@ a {
   color: var(--color-muted);
   font-size: 1.05rem;
 }
+
+/* ------------------------------
+   Contact
+------------------------------ */
+
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+
+  padding: 7rem 5%;
+
+  background-color: var(--color-surface);
+}
+
+.contact-section h2 {
+  margin-top: 0;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.contact-form {
+  max-width: 600px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+
+  border: 1px solid var(--color-muted);
+  border-radius: 0;
+
+  background: var(--color-background);
+  color: var(--color-text);
+
+  font: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
