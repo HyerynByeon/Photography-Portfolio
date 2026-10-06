@@ -54,6 +54,8 @@ a {
    
   padding: 1.5rem 5%;
   border-bottom: 1px solid var(--color-surface);
+
+  background-color: var(--color-background);
 }
 
 .navbar {
