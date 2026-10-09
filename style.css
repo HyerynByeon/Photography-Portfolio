@@ -374,7 +374,7 @@ a {
 
   .nav-links {
     gap: 0.8rem;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-end;
   }
 
