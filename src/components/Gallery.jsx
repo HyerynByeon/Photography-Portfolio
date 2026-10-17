@@ -58,7 +58,7 @@ export default function Gallery() {
 
       <p className="mb-4 text-xs text-still-muted" aria-live="polite">
         Showing {filteredPhotos.length} of {photographs.length} photographs
-        {savedPhotos.length > 0 && ` · ${savedPhotos.length} saved`}
+        {savedPhotos.length > 0 && ` · ${savedPhotos.length} liked`}
       </p>
 
       <div className="grid min-w-0 grid-cols-1 gap-4 sm:auto-rows-[240px] sm:grid-cols-2 lg:auto-rows-[280px] lg:grid-cols-3">
