@@ -1,0 +1,415 @@
+/* ------------------------------
+   Global styles
+------------------------------ */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-background: #f4f1eb;
+  --color-surface: #e8e3da;
+  --color-text: #1d1d1b;
+  --color-muted: #77736d;
+  --color-accent: #a45c45;
+
+  --font-main: Arial, Helvetica, sans-serif;
+
+  --spacing-small: 1rem;
+  --spacing-medium: 2rem;
+  --spacing-large: 5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* ------------------------------
+   Header
+------------------------------ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+   
+  padding: 1.5rem 5%;
+  border-bottom: 1px solid var(--color-surface);
+
+  background-color: var(--color-background);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+  color: var(--color-accent);
+}
+
+/* ------------------------------
+   Hero
+------------------------------ */
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+
+  padding: 6rem 5%;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85")
+    center / cover no-repeat;
+
+  color: white;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.eyebrow {
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.hero h1 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  line-height: 0.95;
+  font-weight: 500;
+}
+
+.hero-text {
+  max-width: 450px;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+/* ------------------------------
+   Buttons
+------------------------------ */
+
+.primary-button {
+  display: inline-block;
+
+  padding: 0.9rem 1.5rem;
+
+  border: 1px solid currentColor;
+
+  background: transparent;
+  color: inherit;
+
+  font: inherit;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.primary-button:hover {
+  background-color: var(--color-text);
+  color: var(--color-background);
+}
+
+/* ------------------------------
+   Work / Gallery
+------------------------------ */
+
+.work-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-large) 5%;
+}
+
+.section-heading {
+  margin-bottom: 3rem;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+}
+
+
+/*
+  CSS Grid is used here to create
+  the responsive photography gallery.
+*/
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 280px;
+  gap: 1rem;
+}
+
+.gallery-item {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.03);
+}
+
+.gallery-item-large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery-item-tall {
+  grid-row: span 2;
+}
+
+.gallery-item-wide {
+  grid-column: span 2;
+}
+
+/* ------------------------------
+   About
+------------------------------ */
+
+.about-section {
+  display: flex;
+  gap: 5rem;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 7rem 5%;
+}
+
+.about-label {
+  flex: 1;
+}
+
+.about-content {
+  flex: 2;
+  max-width: 650px;
+}
+
+.about-content h2 {
+  margin-top: 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.about-content p {
+  color: var(--color-muted);
+  font-size: 1.05rem;
+}
+
+/* ------------------------------
+   Contact
+------------------------------ */
+
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+
+  padding: 7rem 5%;
+
+  background-color: var(--color-surface);
+}
+
+.contact-section h2 {
+  margin-top: 0;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.contact-form {
+  max-width: 600px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+
+  border: 1px solid var(--color-muted);
+  border-radius: 0;
+
+  background: var(--color-background);
+  color: var(--color-text);
+
+  font: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem 5%;
+
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+/* ------------------------------
+   Tablet
+------------------------------ */
+
+@media (max-width: 800px) {
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 240px;
+  }
+
+  .gallery-item-large {
+    grid-column: span 2;
+  }
+
+  .gallery-item-wide {
+    grid-column: span 2;
+  }
+
+  .about-section {
+    gap: 2rem;
+  }
+
+  .contact-section {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+
+/* ------------------------------
+   Mobile
+------------------------------ */
+
+@media (max-width: 500px) {
+
+  .site-header {
+    padding: 1.25rem 5%;
+  }
+
+  .navbar {
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 0.8rem;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .hero {
+    min-height: 75vh;
+    padding: 4rem 5%;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 280px;
+  }
+
+  .gallery-item-large,
+  .gallery-item-wide {
+    grid-column: span 1;
+  }
+
+  .gallery-item-tall {
+    grid-row: span 1;
+  }
+
+  .about-section {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 5rem 5%;
+  }
+
+  .contact-section {
+    padding: 5rem 5%;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
