@@ -2,6 +2,8 @@
 
 React + Tailwind client, Express API, PostgreSQL database, persistent cookie sessions, signup/login, and user-specific likes.
 
+https://photography-portfolio-assignment3.netlify.app/
+
 ## Folder structure
 
 - `src/`: React frontend (Vite + Tailwind)
